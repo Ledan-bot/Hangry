@@ -1,6 +1,8 @@
 package main
 
 import (
+	"Hangry/api/controllers"
+
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
 )
@@ -13,5 +15,7 @@ func main() {
 			"message": "pong",
 		})
 	})
+	router.GET("/tasks", controllers.HandleGetTasks)
+	router.GET("/test", controllers.HandleTestConnection)
 	router.Run(":8025")
 }
