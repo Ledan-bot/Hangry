@@ -1,9 +1,14 @@
 import React from 'react'
+import Header from './components/header/header.jsx'
+
 
 export default function App() {
   return (
-    <h1>
-      Hello Gin Server
-    </h1>
+    <>
+      <Header />
+      <main>
+        <p>stuff goes here</p>
+      </main>
+    </>
   )
 }
