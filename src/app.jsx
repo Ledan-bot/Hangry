@@ -5,18 +5,18 @@ import Header from './components/header/header.jsx'
 
 
 export default function App() {
-  let [menu, updateMenu] = useState(null)
+  let [menus, updateMenus] = useState(null)
 
   useEffect(() => {
-    Axios.get('/test')
+    Axios.get('/api/menus')
       .then(res => {
-        updateMenu(res.data)
+        updateMenus(res.data)
       })
       .catch(err => {
         alert(err)
       })
   }, [])
-  if (!menu) {
+  if (!menus) {
     return (
       <>
         <p>Loading...</p>
@@ -27,7 +27,9 @@ export default function App() {
       <>
         <Header />
         <main>
-          <MenuCard menu={menu}/>
+          {menus.map((menu) => (
+            <MenuCard menu={menu} key={menu._id}/>
+          ))}
         </main>
       </>
     )
