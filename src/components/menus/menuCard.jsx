@@ -12,9 +12,10 @@ export default function MenuCard({menu}) {
       <div className="card-bottom">
         <div>
           <h2>{chef.name}'s {name}</h2>
+          <h4>Stars: {miscellaneous.stars}</h4>
           <p>Average Price per Person: ${miscellaneous.average_price}</p>
         </div>
-        <img src={chef.image}></img>
+        <img src={chef.image} className="chef-image"></img>
       </div>
     </section>
   )
