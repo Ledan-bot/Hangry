@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
 import Axios from 'axios'
+import './searchBar.css'
 
 export default function SearchBar() {
   return (
-    <section>
-      <h1>Hangry's Most Ordered Menus</h1>
+    <section className="search-container">
+      <h1 className="search-title">Hangry's Most Ordered Menus</h1>
       <form>
         <p>Search:</p>
         <input type="search" name="search" placeholder="Find a dish, Chef, ingredient..." />
