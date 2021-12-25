@@ -15,7 +15,7 @@ func main() {
 			"message": "pong",
 		})
 	})
-	router.GET("/tasks", controllers.HandleGetTasks)
 	router.GET("/test", controllers.HandleTestConnection)
+	router.GET("/api/menus", controllers.GetMostOrderedMenus)
 	router.Run(":8025")
 }
