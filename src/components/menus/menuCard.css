@@ -32,6 +32,15 @@
   height: 250px;
 }
 
+.entrees-container {
+  display: none;
+}
+
+.menu-image:hover + .entrees-container {
+  display: block;
+  border: 2px solid black;
+}
+
 .chef-image {
   width: 75px;
   height: 75px;

@@ -1,13 +1,15 @@
 import React from 'react'
 import Axios from 'axios'
 import './menuCard.css'
+import Entrees from './items/Entrees.jsx'
 
 export default function MenuCard({menu}) {
-  const {chef, entrees, name, miscellaneous, image} = menu
+  const {chef, entrees, sides, name, miscellaneous, image} = menu
 
   return (
     <section className="menu-card-container">
       <div className="card-top">
+        <Entrees entrees={entrees}/>
         <img src={image} alt="food" className="menu-image"></img>
         <p className="chef-description">{chef.description}</p>
       </div>
