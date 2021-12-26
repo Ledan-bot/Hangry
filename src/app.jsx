@@ -7,6 +7,9 @@ import MenuCard from './components/menus/menuCard.jsx'
 
 export default function App() {
   let [menus, updateMenus] = useState(null)
+  const {search} = window.location
+  const query = new URLSearchParams(search).get('search')
+  let [searchQuery, updateSearchQuery] = useState(query || '')
 
   useEffect(() => {
     Axios.get('/api/menus')
@@ -17,6 +20,38 @@ export default function App() {
         alert(err)
       })
   }, [])
+
+  const filterMenus = (menus, query) => {
+    if (!query) {
+      return menus
+    }
+    console.log("Insides filterMenus:", query)
+    // return menus.filter((menu) => {
+    //   const { name, entrees, sides, tags, desserts, chef} = menu
+    //   if (name.includes(query)) { return true }
+    //   if (chef.name.includes(query)) { return true }
+    //   for (let i = 0; i < tags.length; i++) {
+    //     if tags[i].tag.includes(query) { return true }
+    //   }
+    //   for (let j = 0; j < entrees.length; j++) {
+    //     if (entrees[j].name.includes(query)) { return true }
+    //   }
+    // })
+    return menus.filter((menu) => {
+      const { name, entrees, sides, tags, desserts, chef} = menu
+      if (name.includes(query)) { return true }
+      if (chef.name.includes(query)) { return true }
+      for (let i = 0; i < tags.length; i++) {
+          if (tags[i].tag.includes(query)) { return true }
+      }
+      for (let j = 0; j < entrees.length; j++) {
+        if (entrees[j].name.includes(query)) { return true }
+      }
+    })
+  }
+
+
+
   if (!menus) {
     return (
       <>
@@ -24,12 +59,13 @@ export default function App() {
       </>
     )
   } else {
+    let filteredMenus = filterMenus(menus, searchQuery)
     return (
       <>
         <Header />
-        <SearchBar />
+        <SearchBar updateSearchQuery={updateSearchQuery}/>
         <main>
-          {menus.map((menu) => (
+          {filteredMenus.map((menu) => (
             <MenuCard menu={menu} key={menu._id}/>
           ))}
         </main>
