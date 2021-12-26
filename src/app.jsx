@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Axios from 'axios'
+import './app.css'
 import Header from './components/header/header.jsx'
 import SearchBar from './components/search/SearchBar.jsx'
 import MenuCard from './components/menus/menuCard.jsx'
@@ -51,8 +52,8 @@ export default function App() {
     return (
       <>
         <Header />
+        <main className="main-container">
         <SearchBar updateSearchQuery={updateSearchQuery}/>
-        <main>
           {filteredMenus.map((menu) => (
             <MenuCard menu={menu} key={menu._id}/>
           ))}

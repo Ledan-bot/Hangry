@@ -5,6 +5,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 3px dashed rgb(85, 130, 228);
 }
 
 .search-title {

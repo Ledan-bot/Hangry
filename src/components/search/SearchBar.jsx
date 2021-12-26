@@ -12,7 +12,7 @@ export default function SearchBar({updateSearchQuery = f => f}) {
 
   return (
     <section className="search-container">
-      <h1 className="search-title">Hangry's Most Ordered Menus</h1>
+      <h1 className="search-title">Washington DC's Most Ordered Menus</h1>
       <form onSubmit={handleSearch} action="/" method="get">
         <p>Search:</p>
         <input type="search" name="search" placeholder="Find a dish, Chef, ingredient..." onChange={e => updateInput(e.target.value)} />
