@@ -16,6 +16,6 @@ func main() {
 		})
 	})
 	router.GET("/test", controllers.HandleTestConnection)
-	router.GET("/api/menus", controllers.GetMostOrderedMenus)
+	router.GET("/api/menus", controllers.GetMenus)
 	router.Run(":8026")
 }

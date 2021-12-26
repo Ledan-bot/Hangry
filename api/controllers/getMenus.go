@@ -11,7 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetMostOrderedMenus(c *gin.Context) {
+func GetMenus(c *gin.Context) {
 	collection := db.OpenCollection(db.Client, "Hangry_data")
 	cursor, err := collection.Find(context.TODO(), bson.D{{}})
 	if err != nil {
