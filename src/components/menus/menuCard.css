@@ -1,9 +1,18 @@
 .menu-card-container {
-  width: 30%;
+  width: 80%;
+  padding-top: 10px;
 }
 
-.card-chef-name {
-  font-size: xx-large;
+.card-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chef-description {
+  font-size: larger;
+  width: 30%;
 }
 
 .card-bottom {
@@ -11,6 +20,16 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.card-title {
+  color: rgb(0, 0, 0);
+  font-size: xx-large;
+}
+
+.menu-image {
+  width: 300px;
+  height: 250px;
 }
 
 .chef-image {
