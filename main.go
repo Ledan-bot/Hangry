@@ -10,12 +10,9 @@ import (
 func main() {
 	router := gin.Default()
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-	router.GET("/test", controllers.HandleTestConnection)
-	router.GET("/api/menus", controllers.GetMenus)
+
+	router.GET("/api/test/ping", controllers.HandleTestConnection)
+	router.GET("/api/menus/all", controllers.GetMenus)
+	router.GET("/api/menus/most_ordered", controllers.GetMostOrdered)
 	router.Run(":8026")
 }
