@@ -1,16 +1,32 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
+import ReactModal from 'react-modal'
 import Axios from 'axios'
 import './app.css'
 import Header from './components/header/header.jsx'
 import SearchBar from './components/search/SearchBar.jsx'
 import MenuCard from './components/menus/menuCard.jsx'
+import Entrees from './components/menus/items/Entrees.jsx'
 
 
 export default function App() {
   let [menus, updateMenus] = useState(null)
-  const {search} = window.location
+  const { search } = window.location
   const query = new URLSearchParams(search).get('search')
   let [searchQuery, updateSearchQuery] = useState(query || '')
+  let [showing, updateShowing] = useState(false)
+  let [currentMenu, updateCurrentMenu] = useState({})
+  ReactModal.setAppElement('#app');
+  console.log(currentMenu)
+
+  const handleModalShowing = () => {
+    updateShowing(!showing)
+  }
+
+  const selectMenu = (index) => {
+    updateCurrentMenu(menus[index])
+    handleModalShowing()
+
+  }
 
   useEffect(() => {
     Axios.get('/api/menus')
@@ -27,11 +43,11 @@ export default function App() {
       return menus
     }
     return menus.filter((menu) => {
-      const { name, entrees, sides, tags, desserts, chef} = menu
+      const { name, entrees, sides, tags, desserts, chef } = menu
       if (name.includes(query)) { return true }
       if (chef.name.includes(query)) { return true }
       for (let i = 0; i < tags.length; i++) {
-          if (tags[i].tag.includes(query)) { return true }
+        if (tags[i].tag.includes(query)) { return true }
       }
       for (let j = 0; j < entrees.length; j++) {
         if (entrees[j].name.includes(query)) { return true }
@@ -51,11 +67,25 @@ export default function App() {
     let filteredMenus = filterMenus(menus, searchQuery)
     return (
       <>
+        <ReactModal isOpen={showing} >
+          <section>
+            <div>
+              <h2>Entrees</h2>
+              <Entrees entrees={currentMenu.entrees}/>
+            </div>
+            <div>
+              <h3>Sides</h3>
+              <Entrees entrees={currentMenu.sides}/>
+            </div>
+          </section>
+          <button>Order Now</button>
+          <button onClick={handleModalShowing}>Close</button>
+        </ReactModal>
         <Header />
         <main className="main-container">
-        <SearchBar updateSearchQuery={updateSearchQuery}/>
-          {filteredMenus.map((menu) => (
-            <MenuCard menu={menu} key={menu._id}/>
+          <SearchBar updateSearchQuery={updateSearchQuery} />
+          {filteredMenus.map((menu, index) => (
+            <MenuCard menu={menu} key={menu._id} handleModalShowing={handleModalShowing} selectMenu={selectMenu} index={index}/>
           ))}
         </main>
       </>

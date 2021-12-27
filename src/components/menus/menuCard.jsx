@@ -3,8 +3,13 @@ import Axios from 'axios'
 import './menuCard.css'
 import Entrees from './items/Entrees.jsx'
 
-export default function MenuCard({menu}) {
+export default function MenuCard({menu, index, handleModalShowing = f => f, selectMenu = f => f}) {
   const {chef, entrees, sides, name, miscellaneous, image} = menu
+
+  const handleOrder = (e) => {
+    e.preventDefault();
+    selectMenu(index)
+  }
 
   return (
     <section className="menu-card-container">
@@ -21,6 +26,7 @@ export default function MenuCard({menu}) {
           <p>Average Price per Person: ${miscellaneous.average_price}</p>
         </div>
         <img src={chef.image} className="chef-image" alt="chef image"></img>
+        <button onClick={handleOrder}>Order Now!</button>
       </div>
     </section>
   )
