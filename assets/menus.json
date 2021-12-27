@@ -1,0 +1,247 @@
+{
+  "name": "All American Classic",
+  "entrees": [
+    {"name": "Grilled Shrimp Skewers", "dietary_restrictions": [], "price": 7.80},
+    {"name": "Broiled Lemon Tilapia", "dietary_restrictions": ["gluten free", "dairy free"], "price": 5.40},
+    {"name": "Roasted Chicken Breast", "dietary_restrictions": ["halal"], "price": 5.40},
+    {"name": "Roasted Salmon", "dietary_restrictions": ["gluten free", "dairy free"], "price": 7.20}
+  ],
+  "sides": [
+    {"name": "Season Vegetable Medley", "dietary_restrictions": ["vegan", "contains gluten", "contains soy"], "price": 2.60},
+    {"name": "Fruit Salad", "dietary_restrictions": ["vegan"], "price": 3.00},
+    {"name": "Mashed Potatoes", "dietary_restrictions": ["vegetarian", "contains dairy"], "price": 3.00},
+    {"name": "Beet and Goat Cheese Salad", "dietary_restrictions": ["contains dairy", "vegetarian"], "price": 2.00}
+  ],
+  "drinks": [
+    {"name": "Infused Water", "price": 55.00},
+    {"name": "Assorted Sodas", "price": 1.20},
+    {"name": "Assorted Juices", "price": 1.80},
+    {"name": "Bottled Water", "price": 1.00}
+  ],
+  "desserts": [
+    {"name": "Halo Halo Shooter", "price": 2.00},
+    {"name": "Beignets", "price": 45.00},
+    {"name": "BYO Donut Bar", "price": 1.50},
+    {"name": "Brownies", "price": 2.40},
+    {"name": "Assorted Cookies", "price": 2.25},
+    {"name": "Assorted Cookies & Brownies", "price": 2.40}
+  ],
+  "appetizers": [
+    {"name": "Mini Shrimp Shooter in Pico Salsa", "price": 7.50},
+    {"name": "Grilled Shrimp Display (Room Temp)", "price": 3.50},
+    {"name": "Mini quiche Lorane",  "price": 1.50},
+    {"name": "Vegetable Crudite & Hummus", "price": 2.00},
+    {"name": "Silver Dollar Sliders with Smoked Aoli", "price": 4.50},
+    {"name": "Grilled Chichen Parm Arancini", "price": 4.50},
+    {"name": "Prosciutto Wrapped Asparagus", "price": 4.00},
+    {"name": "Avocado Toast", "price": 4.00},
+    {"name": "Cheese & Cracker Plate", "price": 3.50},
+    {"name": "Roasted Veggie Skewers", "price": 3.50}
+  ],
+  "chef": {
+    "name": "Chef Irene",
+    "description": "Chef Irene is one of HUNGRY’s talented international chefs.  She was born in the Philippines and is a graduate of L’Academie De Cuisine where she perfected the fusion of Western and Manila flavors.  Chef Irene is also a mainstay on Capitol Hill, so today you’ll dine like our Senators and Congressmen do – and really enjoy her delicious dishes! ",
+    "image": "https://d3nms6niqzdkss.cloudfront.net/unsafe/300x300/smart/filters:extract_focal()/hungry-development-images/chef_profiles/2018/9/18/f3e614bc-619a-4259-b0f2-9af2b96e4a46-1537279226.jpg"
+  },
+  "tags": [
+    {"tag": "American"},
+    {"tag": "Limited Edition"},
+    {"tag": "Most Ordered"}
+  ],
+  "miscellaneous": {
+    "stars": 3.5,
+    "average_price":  8.50
+  },
+  "image": "https://hungry-development-images.s3.amazonaws.com/concepts/2018/5/22/2f09da38-e63c-4779-9014-4d597cc93f05-1527027232.png"
+}
+{
+  "name": "Pasta",
+  "entrees": [
+    {"name": "Vegetable Pasta - Individually Wrapped", "dietary_restrictions": ["contains gluten", "vegetarian", "contains dairy"], "price": 13.00},
+    {"name": "Creamy Tuscan Chicken Pasta - Individually Wrapped", "dietary_restrictions": ["contains dairy", "contains gluten"], "price": 13.00},
+    {"name": "Creamy Tuscan Shrimp Pasta - Individually Wrapped", "dietary_restrictions": ["contains shellfish", "contains dairy", "contains gluten"], "price": 13.00},
+    {"name": "Shrimp & Spinash Pasta - Individually Wrapped", "dietary_restrictions": ["contains gluten", "contains shellfish", "dairy free"], "price": 14.00},
+    {"name": "Cajun Shrimp Pasta - Individually Wrapped", "dietary_restrictions": ["contains gluten", "contains shellfish", "contains dairy"], "price": 13.00}
+  ],
+  "sides": [],
+  "drinks": [
+    {"name": "Assorted Honest Teas", "price": 3.60},
+    {"name": "Assorted Sodas", "price": 1.20},
+    {"name": "Assorted Juices", "price": 1.80},
+    {"name": "Bottled Water", "price": 1.00}
+  ],
+  "desserts": [
+    {"name": "Individual Wrapped Cookies", "price": 1.10},
+    {"name": "Brownies", "price": 2.40},
+    {"name": "Assorted Cookies", "price": 2.25},
+    {"name": "Assorted Cookies & Brownies", "price": 2.40}
+  ],
+  "appetizers": [
+    {"name": "Prosciutto Wrapped Asparagus", "price": 4.00},
+    {"name": "Avocado Toast", "price": 4.00},
+    {"name": "Cheese & Cracker Plate", "price": 3.50},
+    {"name": "Roasted Veggie Skewers", "price": 3.50}
+  ],
+  "chef": {
+    "name": "Chef Janiele",
+    "description": "Chef Janiele was born on the Island of St. Vincent and the Grenadines. Growing up in the Caribbean, food was a defining part of her life. After leaving St. Vincent she traveled to New York before settling down in Virginia. In 2005 Chef Janiele opened her own catering company, JKO Catering, where she showcases Caribbean flare with balanced flavors and fresh ingredients.",
+    "image": "https://d3nms6niqzdkss.cloudfront.net/unsafe/300x300/smart/filters:extract_focal()/hungry-development-images/chef_profiles/2018/10/5/ace9786e-486c-4d33-a85d-334fb5b7a90c-1538763845.jpg"
+  },
+  "tags": [
+    {"tag": "Italian"},
+    {"tag": "Most Ordered"}
+  ],
+  "miscellaneous": {
+    "stars": 4.5,
+    "average_price":  13.00
+  },
+  "image": "https://hungry-development-images.s3.amazonaws.com/concepts/2018/5/22/2f09da38-e63c-4779-9014-4d597cc93f05-1527027232.png"
+}
+{
+  "name": "South American Rotisserie",
+  "entrees": [
+    {"name": "Mojo Pulled Rotisserie Chicken", "dietary_restrictions": ["gluten free", "dairy free"], "price": 8.00},
+    {"name": "Vegan Half Wrap", "dietary_restrictions": ["contains gluten", "vegan"], "price": 6.00},
+    {"name": "Borrachp Half Wrap (Pulled Chicken & Fried Rice)", "dietary_restrictions": ["contains dairy", "contains pork", "contains eggs", "contains gluten"], "price": 6.50},
+    {"name": "Inti Half Wrap (Vegetarian)", "dietary_restrictions": ["contains gluten", "vegetarian", "contains dairy"], "price": 6.00},
+    {"name": "Pollo a la Brasa Half Wrap (Pulled Chicken", "dietary_restrictions": ["contains dairy", "contains gluten"], "price": 6.00},
+    {"name": "South American Rotisserie Chicken", "dietary_restrictions": ["dairy free", "contains soy", "gluten free"], "price": 9.00},
+    {"name": "Pollo Frito Sandwhich", "dietary_restrictions": ["contains pork", "contains eggs", "contains dairy", "contains gluten"], "price": 10.00}
+  ],
+  "sides": [
+    {"name": "Arroz blano (Basmati Rice)", "dietary_restrictions": ["vegan", "gluten free"], "price": 3.00},
+    {"name": "Arepitas (Fried Corn Dough", "dietary_restrictions": ["gluten free", "contains pork", "dairy free"], "price": 3.00},
+    {"name": "Green Plantain Chips", "dietary_restrictions": ["vegan", "dairy free", "gluten free"], "price": 2.00},
+    {"name": "Cucumber & Olive Salad", "dietary_restrictions": ["gluten free", "vegan"], "price": 4.00},
+    {"name": "Yuca Fries", "dietary_restrictions": ["gluten free", "vegan"], "price": 4.00},
+    {"name": "Carribien Coleslaw", "dietary_restrictions": ["dairy free", "contains eggs", "vegetarian", "gluten free"], "price": 4.00},
+    {"name": "Sweet Plantains", "dietary_restrictions": ["gluten free", "vegan"], "price": 3.50},
+    {"name": "Roasted Corn & Tomato Salad", "dietary_restrictions": ["gluten free", "vegan"], "price": 4.00},
+    {"name": "Black Beans", "dietary_restrictions": ["gluten free", "dairy free", "vegetarian"], "price": 3.00}
+  ],
+  "drinks": [
+    {"name": "Assorted Honest Teas", "price": 3.60},
+    {"name": "Assorted Sodas", "price": 1.20},
+    {"name": "Assorted Juices", "price": 1.80},
+    {"name": "Bottled Water", "price": 1.00}
+  ],
+  "desserts": [
+    {"name": "Brownies", "price": 2.40},
+    {"name": "Assorted Cookies", "price": 2.25},
+    {"name": "Assorted Cookies & Brownies", "price": 2.40}
+  ],
+  "appetizers": [],
+  "chef": {
+    "name": "Chef Enrique",
+    "description": "Chef Enrique hails from Caracas, Venezuela, where he began his studies in gastronomy. After completing his formal training in Spain, he worked alongside a litany of distinguished Michelin Star Chefs before being named “Best Chef in Venezuela” by the Venezuelan Gastronomy Academy and a 2018 James Beard Award Nominee. Chef Enrique strives to create authentic and bold flavors that showcase his passion for  technique and ingredients.",
+    "image": "https://d3nms6niqzdkss.cloudfront.net/unsafe/300x300/smart/filters:extract_focal()/hungry-development-images/chef_profiles/2018/3/20/1c477106-d9ec-4a33-9497-67b5446f7b75-1521563986.jpg"
+
+  },
+  "tags": [
+    {"tag": "Latin"},
+    {"tag": "Sandwhich & Salads"},
+    {"tag": "Most Ordered"}
+  ],
+  "miscellaneous": {
+    "stars": 4.0,
+    "average_price":  13.50
+  },
+  "image": "https://hungry-development-images.s3.amazonaws.com/concepts/2018/5/22/2f09da38-e63c-4779-9014-4d597cc93f05-1527027232.png"
+}
+{
+  "name": "Fajita",
+  "entrees": [
+    {"name": "Veggie Fajitas - Individually Wrapped", "price": 14.00},
+    {"name": "Shrimp Fajitas - Individually Wrapped", "price": 14.00},
+    {"name": "Chicken Fajitas - Individually Wrapped", "price": 14.00}
+  ],
+  "sides": [],
+  "drinks": [
+    {"name": "Assorted Honest Teas", "price": 3.60},
+    {"name": "Assorted Sodas", "price": 1.20},
+    {"name": "Assorted Juices", "price": 1.80},
+    {"name": "Bottled Water", "price": 1.00}
+  ],
+  "desserts": [
+    {"name": "Individual Wrapped Cookies", "price": 1.10},
+    {"name": "Brownies", "price": 2.40},
+    {"name": "Assorted Cookies", "price": 2.25},
+    {"name": "Assorted Cookies & Brownies", "price": 2.40}
+  ],
+  "appetizers": [],
+  "chef": {
+    "name": "Chef Janiele",
+    "description": "Chef Janiele was born on the Island of St. Vincent and the Grenadines. Growing up in the Caribbean, food was a defining part of her life. After leaving St. Vincent she traveled to New York before settling down in Virginia. In 2005 Chef Janiele opened her own catering company, JKO Catering, where she showcases Caribbean flare with balanced flavors and fresh ingredients.",
+    "image": "https://d3nms6niqzdkss.cloudfront.net/unsafe/300x300/smart/filters:extract_focal()/hungry-development-images/chef_profiles/2018/10/5/ace9786e-486c-4d33-a85d-334fb5b7a90c-1538763845.jpg"
+  },
+  "tags": [
+    {"tag": "Mexican"}
+  ],
+  "miscellaneous": {
+    "stars": 4.5,
+    "average_price":  14.00
+  },
+  "image": "https://hungry-development-images.s3.amazonaws.com/concepts/2018/5/22/2f09da38-e63c-4779-9014-4d597cc93f05-1527027232.png"
+}
+{
+  "name": "Organic Filipino Fusion",
+  "entrees": [
+    {"name": "Filipino Prok BBQ Skewers (Organic)", "dietary_restrictions": [], "price": 12.00},
+    {"name": "Broiled Tilapia (Organic)", "dietary_restrictions": ["gluten free", "dairy free"], "price": 10.00},
+    {"name": "Roasted Chicken Breast (Organic)", "dietary_restrictions": [], "price": 9.00},
+    {"name": "Coconut Braised Squash (Organic)", "dietary_restrictions": [], "price": 7.50},
+    {"name": "Grilled Chicken Inasal (Organic)", "dietary_restrictions": ["dairy free", "gluten free"], "price": 12.00}
+  ],
+  "sides": [
+    {"name": "Green Beans (Organic)", "dietary_restrictions": [], "price": 3.50},
+    {"name": "Jasmine Rice (Organic)", "dietary_restrictions": [], "price": 3.50},
+    {"name": "Coconut Braised Kale (Organic)", "dietary_restrictions": ["vegan", "halal"], "price": 3.50},
+    {"name": "Mung Bean Salad", "dietary_restrictions": ["vegetarian", "contains dairy"], "price": 3.50}
+  ],
+  "drinks": [
+    {"name": "Infused Water", "price": 55.00},
+    {"name": "Cranberry & Rosemary Holiday Punch", "price": 1.50},
+    {"name": "Got Apple Cider", "price": 2.00},
+    {"name": "Assorted Sodas", "price": 1.20},
+    {"name": "Assorted Juices", "price": 1.80},
+    {"name": "Bottled Water", "price": 1.00}
+  ],
+  "desserts": [
+    {"name": "Halo Halo Shooter", "price": 2.00},
+    {"name": "Beignets", "price": 45.00},
+    {"name": "BYO Donut Bar", "price": 1.50},
+    {"name": "Brownies", "price": 2.40},
+    {"name": "Assorted Cookies", "price": 2.25},
+    {"name": "Assorted Cookies & Brownies", "price": 2.40}
+  ],
+  "appetizers": [
+    {"name": "Mini Shrimp Shooter in Pico Salsa", "price": 7.50},
+    {"name": "Grilled Shrimp Display (Room Temp)", "price": 3.50},
+    {"name": "Mini quiche Lorane",  "price": 1.50},
+    {"name": "Vegetable Crudite & Hummus", "price": 2.00},
+    {"name": "Silver Dollar Sliders with Smoked Aoli", "price": 4.50},
+    {"name": "Grilled Chichen Parm Arancini", "price": 4.50},
+    {"name": "Prosciutto Wrapped Asparagus", "price": 4.00},
+    {"name": "Avocado Toast", "price": 4.00},
+    {"name": "Cheese & Cracker Plate", "price": 3.50},
+    {"name": "Roasted Veggie Skewers", "price": 3.50}
+  ],
+  "chef": {
+    "name": "Chef Irene",
+    "description": "Chef Irene is one of HUNGRY’s talented international chefs.  She was born in the Philippines and is a graduate of L’Academie De Cuisine where she perfected the fusion of Western and Manila flavors.  Chef Irene is also a mainstay on Capitol Hill, so today you’ll dine like our Senators and Congressmen do – and really enjoy her delicious dishes! ",
+    "image": "https://d3nms6niqzdkss.cloudfront.net/unsafe/300x300/smart/filters:extract_focal()/hungry-development-images/chef_profiles/2018/9/18/f3e614bc-619a-4259-b0f2-9af2b96e4a46-1537279226.jpg"
+  },
+  "tags": [
+    {"tag": "Most Ordered"},
+    {"tag": "Light & Healthy"},
+    {"tag": "Asian"},
+    {"tag": "Filipino"},
+    {"tag": "Vegetarian"},
+    {"tag": "Limited Edition"}
+  ],
+  "miscellaneous": {
+    "stars": 3.5,
+    "average_price":  12.50
+  },
+  "image": "https://hungry-development-images.s3.amazonaws.com/concepts/2018/5/22/2f09da38-e63c-4779-9014-4d597cc93f05-1527027232.png"
+}
