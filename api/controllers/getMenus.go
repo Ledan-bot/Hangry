@@ -3,12 +3,10 @@ package controllers
 import (
 	"Hangry/api/db"
 	"context"
-	"fmt"
 	"net/http"
 
-	"go.mongodb.org/mongo-driver/bson"
-
 	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 func GetMenus(c *gin.Context) {
@@ -17,7 +15,7 @@ func GetMenus(c *gin.Context) {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println(cursor)
+
 	var menus []bson.M
 	if err = cursor.All(context.TODO(), &menus); err != nil {
 		panic(err)
