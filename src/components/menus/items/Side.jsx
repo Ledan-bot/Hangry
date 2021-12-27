@@ -1,7 +1,8 @@
 import React from 'react'
+import DietRestrictions from './DietRestrictions.jsx'
 
 export default function Side({side}) {
-  const {name, price} = side
+  const {name, price, dietary_restrictions} = side
 
   const formatter = new Intl.NumberFormat('en-US', {
     styles: 'currency',
@@ -11,6 +12,7 @@ export default function Side({side}) {
   return (
     <>
       <h1>{name}</h1>
+      <DietRestrictions dietary_restrictions={dietary_restrictions}/>
       <p>${formatter.format(price)}</p>
     </>
   )
