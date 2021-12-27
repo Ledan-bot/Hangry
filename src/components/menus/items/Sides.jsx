@@ -10,11 +10,14 @@ export default function Sides({ sides }) {
     )
   } else {
     return (
-      <section className="sides-container">
-        {sides.map((side, i) => (
-          <Side key={i} side={side} />
-        ))}
-      </section>
+      <>
+        <h3 className="item-title">Sides:</h3>
+        <section className="sides-container">
+          {sides.map((side, i) => (
+            <Side key={i} side={side} />
+          ))}
+        </section>
+      </>
     )
   }
 }

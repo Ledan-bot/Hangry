@@ -1,7 +1,12 @@
 .sides-container {
-  width: 35%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-bottom: 3px dashed black;
+}
+
+.item-title {
+	font-size: larger;
+  padding-bottom: 5px;
 }

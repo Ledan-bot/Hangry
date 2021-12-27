@@ -1,5 +1,6 @@
 import React from 'react'
 import Appetizer from './Appetizer.jsx'
+import './Appetizers.css'
 
 export default function Appetizers({appetizers}) {
   if (appetizers.length === 0) {
@@ -10,8 +11,8 @@ export default function Appetizers({appetizers}) {
   } else {
     return (
       <>
-        <h3>Appetizers:</h3>
-        <section>
+        <h3 className="item-title">Appetizers:</h3>
+        <section className="appetizer-container">
           {appetizers.map((appetizer, i) => (
             <Appetizer key={i} appetizer={appetizer} />
           ))}

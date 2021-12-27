@@ -10,13 +10,13 @@ export default function Modal({menu, handleModalShowing = f => f,}) {
   return (
     <section className="modal-section">
       <h1 className="modal-title">{chef.name}'s {name} Menu</h1>
-      <h3>Entrees:</h3>
+      <h3 className="item-title">Entrees:</h3>
       <Entrees entrees={entrees}/>
       <Sides sides={sides}/>
       <Appetizers appetizers={appetizers}/>
-      <h2>Desserts:</h2>
+      <h2 className="item-title">Desserts:</h2>
       <Items items={desserts}/>
-      <h3>Drinks:</h3>
+      <h3 className="item-title">Drinks:</h3>
       <Items items={drinks}/>
       <div className="modal-btn-container">
         <button className="modal-btn" onClick={() => alert("Order Functionaility Coming Soon")}>Order Now</button>
