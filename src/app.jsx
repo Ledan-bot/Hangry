@@ -29,7 +29,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    Axios.get('/api/menus')
+    Axios.get('/api/menus/most_ordered')
       .then(res => {
         updateMenus(res.data)
       })
@@ -50,7 +50,12 @@ export default function App() {
         if (tags[i].tag.includes(query)) { return true }
       }
       for (let j = 0; j < entrees.length; j++) {
-        if (entrees[j].name.includes(query)) { return true }
+        let currentEntree = entrees[j]
+        if (currentEntree.name.includes(query)) { return true }
+        for (let k = 0; k < currentEntree.dietary_restrictions.length; k++) {
+          let currentDR = currentEntree.dietary_restrictions[k]
+          if (currentDR.includes(query)) { return true }
+        }
       }
     })
   }
