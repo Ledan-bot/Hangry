@@ -23,7 +23,7 @@ export default function MenuCard({menu, index, handleModalShowing = f => f, sele
           <h2 className="card-title">{chef.name}'s {name}</h2>
           <h4>Stars: {miscellaneous.stars}</h4>
           <p>Average Price per Person: ${miscellaneous.average_price}</p>
-          <button onClick={handleOrder} className="order-button">Order Now!</button>
+          <button onClick={handleOrder} className="hangry-btn">View Menu</button>
         </div>
         <img src={chef.image} className="chef-image" alt="chef image"></img>
       </div>

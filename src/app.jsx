@@ -17,7 +17,6 @@ export default function App() {
   let [showing, updateShowing] = useState(false)
   let [currentMenu, updateCurrentMenu] = useState({})
   ReactModal.setAppElement('#app');
-  console.log(currentMenu)
 
   const handleModalShowing = () => {
     updateShowing(!showing)
@@ -68,7 +67,7 @@ export default function App() {
     let filteredMenus = filterMenus(menus, searchQuery)
     return (
       <>
-        <ReactModal isOpen={showing} >
+        <ReactModal isOpen={showing}  className="ReactModal__Content--after-open">
           <Modal menu={currentMenu} handleModalShowing={handleModalShowing}/>
         </ReactModal>
         <Header />

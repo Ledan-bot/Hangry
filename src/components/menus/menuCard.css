@@ -33,15 +33,14 @@
 }
 
 
-.order-button {
+.hangry-btn {
   border: 2px solid red;
   border-radius: 25%;
   color: red;
   padding: 5px 10px 5px 10px;
-
 }
 
-.order-button:hover {
+.hangry-btn:hover {
   background-color: red;
   color: black;
 }

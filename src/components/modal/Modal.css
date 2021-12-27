@@ -1,0 +1,31 @@
+.modal-section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-title {
+  font-size: x-large;
+  color: red;
+  text-underline-position: auto;
+}
+
+.modal-btn-container {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.modal-btn {
+  border: 2px solid red;
+  border-radius: 25%;
+  color: red;
+  padding: 5px 10px 5px 10px;
+}
+
+.modal-btn:hover {
+  background-color: red;
+  color: black;
+}

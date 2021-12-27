@@ -5,3 +5,15 @@
   align-items: center;
   padding-top: 2%;
 }
+
+.ReactModal__Content--after-open {
+  position: absolute;
+  inset: 40px;
+  border: 2px solid rgb(85, 130, 228);
+  background-color: rgb(226, 238, 246);
+  width: 75%;
+  overflow: auto;
+  border-radius: 5%;
+  padding: 20px;
+  outline: none;
+}
