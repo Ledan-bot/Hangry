@@ -5,9 +5,8 @@ import './Sides.css'
 export default function Sides({ sides }) {
   if (sides.length === 0) {
     return (
-      <section className="sides-container">
-        <p>Coming Soon!</p>
-      </section>
+      <>
+      </>
     )
   } else {
     return (
