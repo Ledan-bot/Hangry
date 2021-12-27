@@ -8,11 +8,15 @@ import (
 )
 
 func main() {
+	setupServer().Run(":8026")
+}
+
+func setupServer() *gin.Engine {
 	router := gin.Default()
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 
 	router.GET("/api/test/ping", controllers.HandleTestConnection)
 	router.GET("/api/menus/all", controllers.GetMenus)
 	router.GET("/api/menus/most_ordered", controllers.GetMostOrdered)
-	router.Run(":8026")
+	return router
 }
