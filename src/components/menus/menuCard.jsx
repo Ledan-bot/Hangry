@@ -14,7 +14,6 @@ export default function MenuCard({menu, index, handleModalShowing = f => f, sele
   return (
     <section className="menu-card-container">
       <div className="card-top">
-        <Entrees entrees={entrees}/>
         <img src={image} alt="food" className="menu-image"></img>
         <p className="chef-description">{chef.description}</p>
       </div>
@@ -24,9 +23,9 @@ export default function MenuCard({menu, index, handleModalShowing = f => f, sele
           <h2 className="card-title">{chef.name}'s {name}</h2>
           <h4>Stars: {miscellaneous.stars}</h4>
           <p>Average Price per Person: ${miscellaneous.average_price}</p>
+          <button onClick={handleOrder} className="order-button">Order Now!</button>
         </div>
         <img src={chef.image} className="chef-image" alt="chef image"></img>
-        <button onClick={handleOrder}>Order Now!</button>
       </div>
     </section>
   )

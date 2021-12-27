@@ -32,13 +32,18 @@
   height: 250px;
 }
 
-.entrees-container {
-  display: none;
+
+.order-button {
+  border: 2px solid red;
+  border-radius: 25%;
+  color: red;
+  padding: 5px 10px 5px 10px;
+
 }
 
-.menu-image:hover + .entrees-container {
-  display: block;
-  border: 2px solid black;
+.order-button:hover {
+  background-color: red;
+  color: black;
 }
 
 .chef-image {

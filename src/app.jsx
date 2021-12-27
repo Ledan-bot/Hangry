@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactModal from 'react-modal'
 import Axios from 'axios'
 import './app.css'
+import Modal from './components/modal/Modal.jsx'
 import Header from './components/header/header.jsx'
 import SearchBar from './components/search/SearchBar.jsx'
 import MenuCard from './components/menus/menuCard.jsx'
@@ -68,18 +69,7 @@ export default function App() {
     return (
       <>
         <ReactModal isOpen={showing} >
-          <section>
-            <div>
-              <h2>Entrees</h2>
-              <Entrees entrees={currentMenu.entrees}/>
-            </div>
-            <div>
-              <h3>Sides</h3>
-              <Entrees entrees={currentMenu.sides}/>
-            </div>
-          </section>
-          <button>Order Now</button>
-          <button onClick={handleModalShowing}>Close</button>
+          <Modal menu={currentMenu} handleModalShowing={handleModalShowing}/>
         </ReactModal>
         <Header />
         <main className="main-container">
