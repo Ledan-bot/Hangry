@@ -18,8 +18,8 @@ export default function Modal({menu, handleModalShowing = f => f,}) {
       <h3>Drinks:</h3>
       <Items items={drinks}/>
       <div className="modal-btn-container">
-        <button className="hangry-btn">Order Now</button>
-        <button className="hangry-btn" onClick={handleModalShowing}>Close</button>
+        <button className="modal-btn">Order Now</button>
+        <button className="modal-btn" onClick={handleModalShowing}>Close</button>
       </div>
     </section>
   )
