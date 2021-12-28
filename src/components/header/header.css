@@ -4,7 +4,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   box-shadow: 0 4px 2px -2px gray;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .header-title {
@@ -12,4 +18,15 @@
   color: red
 }
 
+.header-react-icon {
+  font-size: 40px;
+  color: red
+}
+
+.login-link {
+  padding-right: 20px;
+  color: gray;
+  text-decoration: underline;
+  text-decoration-color: gray;
+}
 
