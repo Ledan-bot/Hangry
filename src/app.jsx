@@ -44,17 +44,17 @@ export default function App() {
     }
     return menus.filter((menu) => {
       const { name, entrees, sides, tags, desserts, chef } = menu
-      if (name.includes(query)) { return true }
-      if (chef.name.includes(query)) { return true }
+      if (name.toLowerCase().includes(query.toLowerCase())) { return true }
+      if (chef.name.toLowerCase().includes(query.toLowerCase())) { return true }
       for (let i = 0; i < tags.length; i++) {
-        if (tags[i].tag.includes(query)) { return true }
+        if (tags[i].tag.toLowerCase().includes(query.toLowerCase())) { return true }
       }
       for (let j = 0; j < entrees.length; j++) {
         let currentEntree = entrees[j]
-        if (currentEntree.name.includes(query)) { return true }
+        if (currentEntree.name.toLowerCase().includes(query.toLowerCase())) { return true }
         for (let k = 0; k < currentEntree.dietary_restrictions.length; k++) {
           let currentDR = currentEntree.dietary_restrictions[k]
-          if (currentDR.includes(query)) { return true }
+          if (currentDR.toLowerCase().includes(query.toLowerCase())) { return true }
         }
       }
     })
