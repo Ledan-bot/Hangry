@@ -25,7 +25,7 @@ Please contact the author if you would like a MongoDB connection URI as the data
 ## Run Locally
 
 
-Clone the repository from github using the following command.
+Clone the repository onto your local machine from github using the following command.
 ```bash
   git clone <my-project-url>
 ```
