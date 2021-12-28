@@ -11,6 +11,12 @@ export default function MenuCard({menu, index, handleModalShowing = f => f, sele
     selectMenu(index)
   }
 
+  const formatter = new Intl.NumberFormat('en-US', {
+    styles: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2
+  })
+
   return (
     <section className="menu-card-container">
       <div className="card-top">
@@ -22,7 +28,7 @@ export default function MenuCard({menu, index, handleModalShowing = f => f, sele
         <div>
           <h2 className="card-title">{chef.name}'s {name}</h2>
           <h4>Stars: {miscellaneous.stars}</h4>
-          <p>Average Price per Person: ${miscellaneous.average_price}</p>
+          <p>Average Price per Person: ${formatter.format(miscellaneous.average_price)}</p>
           <button onClick={handleOrder} className="hangry-btn">View Menu</button>
         </div>
         <img src={chef.image} className="chef-image" alt="chef image"></img>
