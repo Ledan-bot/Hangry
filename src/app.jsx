@@ -3,9 +3,9 @@ import ReactModal from 'react-modal'
 import Axios from 'axios'
 import './app.css'
 import Modal from './components/modal/Modal.jsx'
-import Header from './components/header/header.jsx'
+import Header from './components/header/Header.jsx'
 import SearchBar from './components/search/SearchBar.jsx'
-import MenuCard from './components/menus/menuCard.jsx'
+import MenuCard from './components/menus/MenuCard.jsx'
 import Entrees from './components/menus/items/Entrees.jsx'
 
 

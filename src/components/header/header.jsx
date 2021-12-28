@@ -1,7 +1,7 @@
 import React from 'react'
 import {IconContext} from 'react-icons'
 import {MdOutlineFoodBank} from 'react-icons/md'
-import './header.css'
+import './Header.css'
 
 export default function Header() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import Axios from 'axios'
-import './menuCard.css'
+import './MenuCard.css'
 import Entrees from './items/Entrees.jsx'
 
 export default function MenuCard({menu, index, handleModalShowing = f => f, selectMenu = f => f}) {
