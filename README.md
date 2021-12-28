@@ -29,15 +29,20 @@ Clone the repository from github using the following command.
 ```bash
   git clone <my-project-url>
 ```
-Navigate to the repository & run the following command to install the packages. via whichever package manager.
+Navigate to the root directory.
 
 ```bash
-  npm install || yarn install
+  cd <my-project>
 ```
-Now we need to build the webpack bundle
+Run the following command to install the packages for the front-end via npm.
+```bash
+   npm install
+```
+
+Now build the webpack bundle bu running the following command
 
 ```bash
-  npm run webpack || yarn run webpack
+  npm run webpack
 ```
 Now that our Front-end portion hs been created and we are ready to server the static file via the web server. *Again please make GO is installed, and the GOPATH is configured correctly.
 
@@ -50,10 +55,13 @@ The above command will compile and run the the application. *Note this creates a
 If you would like to build and store the compiled binary on your local machine run the followed lines: The first creates the compiled binary into a file located within the main directory. The second line simply runs the compiled binary.
 
 ```bash
-    go build Hangry
+  go build Hangry
 
-    ./Hangry
+  ./Hangry
 ```
+
+
+Now nativgate to http://localhost:8026/ in your broswer of choice.
 
 ## Running Tests
 
