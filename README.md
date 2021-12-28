@@ -71,6 +71,12 @@ To run the GOLANG tests, run the following command
   go test
 ```
 
+To run the tests with Jest, run the following command
+
+```bash
+  npm run test
+```
+
 
 ## Acknowledgements
 
