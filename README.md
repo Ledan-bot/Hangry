@@ -2,7 +2,7 @@
 # Hangry
 
 This is a psuedo application meant to showcase the most ordered menus from Hungry's Washington DC area. Please try Hungry! - https://tryhungry.com/
-The front-end portion of this application was built with React; the back end created with Golang utilzing the Gin framework, and Mongo DB's cloud based storage Mongo Atlas to allow data persistance.
+The front-end portion of this application was built with React; the back end created with GO utilzing the Gin framework, and Mongo DB's cloud based storage Mongo Atlas to allow data persistance.
 
 
 ## Authors
@@ -44,15 +44,15 @@ Now build the webpack bundle bu running the following command
 ```bash
   npm run webpack
 ```
-Now that our Front-end portion hs been created and we are ready to server the static file via the web server. *Again please make GO is installed, and the GOPATH is configured correctly.
+Now that our Front-end portion has been created, we are ready to start the server which will serve the static file for the SPA, and hold the API endpoints. *Again please make sure GO is installed, and the GOPATH has been configured correctly.
 
-Open a seperate terminal window and navigate to the root directory of the application and run either of the following commands to start th web server which serves the static files and holds API endpoints.
+Open a seperate terminal window and navigate to the root directory of the application and run either of the following commands to start the web server.
 ```bash
   go run main.go
 ```
 The above command will compile and run the the application. *Note this creates a temporary file that stores the compiled binary for the program and then that file will be destroyed upon terminating the program/closing the server.
 
-If you would like to build and store the compiled binary on your local machine run the followed lines: The first creates the compiled binary into a file located within the main directory. The second line simply runs the compiled binary.
+If you would like to build and store the compiled binary on your local machine run the followed lines: The first line creates the compiled binary into a file located within the main directory. The second line simply runs the compiled binary.
 
 ```bash
   go build Hangry
@@ -65,7 +65,7 @@ Now nativgate to http://localhost:8026/ in your broswer of choice.
 
 ## Running Tests
 
-To run the GOLANG tests, run the following command
+To run the GO tests, run the following command
 
 ```bash
   go test
@@ -103,10 +103,13 @@ To run the tests with Jest, run the following command
 ```http
   GET /api/menus/most_ordered
 ```
+#### Test API
 
-
+```http
+  GET /api/test/ping
+```
 
 ## Feedback
 
-If you have any feedback, please reach out to at Nickledan5@gmail.com
+If you have any feedback, please reach out at Nickledan5@gmail.com
 
