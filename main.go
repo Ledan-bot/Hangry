@@ -18,5 +18,7 @@ func setupServer() *gin.Engine {
 	router.GET("/api/test/ping", controllers.HandleTestConnection)
 	router.GET("/api/menus/all", controllers.GetMenus)
 	router.GET("/api/menus/most_ordered", controllers.GetMostOrdered)
+	router.POST("/api/menu/add", controllers.AddMenu)
+	router.PUT("/api/menu/tag/:name", controllers.AddNewTag)
 	return router
 }
