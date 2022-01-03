@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "webpack": "webpack watch"
+    "webpack": "webpack watch",
+    "load-data": "mongoimport --uri mongodb+srv://HungryHuman:HungryHungryHungry@hungry.iqvuy.mongodb.net/Hungry --collection Hangry_data --drop  --type JSON  --file ./assets/menus.json"
   },
   "repository": {
     "type": "git",
