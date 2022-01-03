@@ -3,6 +3,8 @@ package main
 import (
 	"Hangry/api/controllers"
 	"Hangry/api/middleware"
+	"io"
+	"os"
 
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
@@ -13,7 +15,12 @@ func main() {
 }
 
 func setupServer() *gin.Engine {
+	file, _ := os.Create("Hangry.log")
+	gin.DefaultWriter = io.MultiWriter(file)
 	router := gin.Default()
+	router.Use(gin.LoggerWithFormatter(middleware.Logger))
+	router.Use(gin.Recovery())
+	router.Use(middleware.PrintLogger())
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 
 	router.GET("/api/test/ping", middleware.TestMiddle, controllers.HandleTestConnection)
