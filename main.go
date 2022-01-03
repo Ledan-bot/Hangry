@@ -2,6 +2,7 @@ package main
 
 import (
 	"Hangry/api/controllers"
+	"Hangry/api/middleware"
 
 	"github.com/gin-gonic/contrib/static"
 	"github.com/gin-gonic/gin"
@@ -15,10 +16,10 @@ func setupServer() *gin.Engine {
 	router := gin.Default()
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 
-	router.GET("/api/test/ping", controllers.HandleTestConnection)
+	router.GET("/api/test/ping", middleware.TestMiddle, controllers.HandleTestConnection)
 	router.GET("/api/menus/all", controllers.GetMenus)
 	router.GET("/api/menus/most_ordered", controllers.GetMostOrdered)
 	router.POST("/api/menu/add", controllers.AddMenu)
-	router.PUT("/api/menu/tag/:name", controllers.AddNewTag)
+	router.POST("/api/menu/tag/:name", controllers.AddNewTag)
 	return router
 }
