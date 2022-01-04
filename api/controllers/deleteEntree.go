@@ -11,29 +11,28 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-func DeleteTag(c *gin.Context) {
+func DeleteEntree(c *gin.Context) {
 	collection := db.OpenCollection(db.Client, "Hangry_data")
 	var validate = validator.New()
 	name := c.Param("name")
 	filter := bson.D{{"name", name}}
-	var tag models.Tag
-	if err := c.BindJSON(&tag); err != nil {
+	var entree models.Entree
+	if err := c.BindJSON(&entree); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
-	update := bson.M{"$pull": bson.M{"tags": tag}}
-	validationErr := validate.Struct(tag)
+	update := bson.M{"$pull": bson.M{"entrees": entree}}
+	validationErr := validate.Struct(entree)
 	if validationErr != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": validationErr.Error()})
 		return
 	}
 	result, updateErr := collection.UpdateOne(context.TODO(), filter, update)
 	if updateErr != nil {
-		msg := "Menu was not updated & the tag was not deleted"
+		msg := "Menu was not updated & the entree was not Deleted"
 		c.JSON(http.StatusInternalServerError, gin.H{"error": msg})
 		return
 	}
 
 	c.JSON(http.StatusNoContent, result)
-
 }

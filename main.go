@@ -27,8 +27,9 @@ func setupServer() *gin.Engine {
 	router.GET("/api/menus/all", controllers.GetMenus)
 	router.GET("/api/menus/most_ordered", controllers.GetMostOrdered)
 	router.POST("/api/menu/add", controllers.AddMenu)
-	router.POST("/api/menu/tag/:name", controllers.AddNewTag)
+	router.PUT("/api/menu/entree/:name", controllers.AddEntree)
+	router.DELETE("/api/menu/entree/:name", controllers.DeleteEntree)
+	router.PUT("/api/menu/tag/:name", controllers.AddNewTag)
 	router.DELETE("/api/menu/tag/:name", controllers.DeleteTag)
-	router.POST("/api/menu/entree/:name", controllers.AddEntree)
 	return router
 }
