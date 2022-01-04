@@ -9,13 +9,14 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 
 func DeleteTag(c *gin.Context) {
 	collection := db.OpenCollection(db.Client, "Hangry_data")
 	var validate = validator.New()
 	name := c.Param("name")
-	filter := bson.D{{"name", name}}
+	filter := bson.D{primitive.E{Key: "name", Value: name}}
 	var tag models.Tag
 	if err := c.BindJSON(&tag); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
