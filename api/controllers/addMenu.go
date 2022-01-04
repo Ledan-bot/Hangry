@@ -30,5 +30,5 @@ func AddMenu(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, result)
+	c.JSON(http.StatusCreated, result)
 }

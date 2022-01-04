@@ -20,7 +20,7 @@ func setupServer() *gin.Engine {
 	router := gin.Default()
 	router.Use(gin.LoggerWithFormatter(middleware.Logger))
 	router.Use(gin.Recovery())
-	router.Use(middleware.PrintLogger())
+
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 
 	router.GET("/api/test/ping", middleware.TestMiddle, controllers.HandleTestConnection)
@@ -28,5 +28,7 @@ func setupServer() *gin.Engine {
 	router.GET("/api/menus/most_ordered", controllers.GetMostOrdered)
 	router.POST("/api/menu/add", controllers.AddMenu)
 	router.POST("/api/menu/tag/:name", controllers.AddNewTag)
+	router.DELETE("/api/menu/tag/:name", controllers.DeleteTag)
+	router.POST("/api/menu/entree/:name", controllers.AddEntree)
 	return router
 }

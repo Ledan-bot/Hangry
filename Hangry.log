@@ -1,0 +1,26 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/test/ping            --> Hangry/api/controllers.HandleTestConnection (7 handlers)
+[GIN-debug] GET    /api/menus/all            --> Hangry/api/controllers.GetMenus (6 handlers)
+[GIN-debug] GET    /api/menus/most_ordered   --> Hangry/api/controllers.GetMostOrdered (6 handlers)
+[GIN-debug] POST   /api/menu/add             --> Hangry/api/controllers.AddMenu (6 handlers)
+[GIN-debug] POST   /api/menu/tag/:name       --> Hangry/api/controllers.AddNewTag (6 handlers)
+[GIN-debug] DELETE /api/menu/tag/:name       --> Hangry/api/controllers.DeleteTag (6 handlers)
+[GIN-debug] POST   /api/menu/entree/:name    --> Hangry/api/controllers.AddEntree (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8026
+::1 - [Mon, 03 Jan 2022 19:17:15 EST] "GET /api/test/ping HTTP/1.1 200 96.896µs "PostmanRuntime/7.28.3" "
+[GIN] 2022/01/03 - 19:17:15 | 200 |     256.283µs |             ::1 | GET      "/api/test/ping"
+::1 - [Mon, 03 Jan 2022 19:18:29 EST] "POST /api/menu/add HTTP/1.1 201 262.669207ms "PostmanRuntime/7.28.3" "
+[GIN] 2022/01/03 - 19:18:29 | 201 |  262.730265ms |             ::1 | POST     "/api/menu/add"
+::1 - [Mon, 03 Jan 2022 19:19:03 EST] "POST /api/menu/tag/TEST MENU POST HTTP/1.1 201 33.880316ms "PostmanRuntime/7.28.3" "
+[GIN] 2022/01/03 - 19:19:03 | 201 |   33.933451ms |             ::1 | POST     "/api/menu/tag/TEST MENU POST"
+::1 - [Mon, 03 Jan 2022 19:19:29 EST] "GET /api/test/ping HTTP/1.1 200 31.607µs "PostmanRuntime/7.28.3" "
+[GIN] 2022/01/03 - 19:19:29 | 200 |      69.623µs |             ::1 | GET      "/api/test/ping"
+::1 - [Mon, 03 Jan 2022 19:21:42 EST] "POST /api/menu/entree/TEST MENU POST HTTP/1.1 201 34.413806ms "PostmanRuntime/7.28.3" "
+[GIN] 2022/01/03 - 19:21:42 | 201 |   34.476297ms |             ::1 | POST     "/api/menu/entree/TEST MENU POST"

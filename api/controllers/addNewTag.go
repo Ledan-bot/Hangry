@@ -29,10 +29,10 @@ func AddNewTag(c *gin.Context) {
 	}
 	result, updateErr := collection.UpdateOne(context.TODO(), filter, update)
 	if updateErr != nil {
-		msg := "Menu was not updated"
+		msg := "Menu was not updated & the tag was not added"
 		c.JSON(http.StatusInternalServerError, gin.H{"error": msg})
 		return
 	}
 
-	c.JSON(http.StatusOK, result)
+	c.JSON(http.StatusCreated, result)
 }
