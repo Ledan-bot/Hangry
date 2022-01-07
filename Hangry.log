@@ -1,0 +1,17 @@
+[GIN-debug] [WARNING] Creating an Engine instance with the Logger and Recovery middleware already attached.
+
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /api/test/ping            --> Hangry/api/controllers.HandleTestConnection (7 handlers)
+[GIN-debug] GET    /api/menus/all            --> Hangry/api/controllers.GetMenus (6 handlers)
+[GIN-debug] GET    /api/menus/most_ordered   --> Hangry/api/controllers.GetMostOrdered (6 handlers)
+[GIN-debug] POST   /api/menu/add             --> Hangry/api/controllers.AddMenu (6 handlers)
+[GIN-debug] PUT    /api/menu/entree/:name    --> Hangry/api/controllers.AddEntree (6 handlers)
+[GIN-debug] DELETE /api/menu/entree/:name    --> Hangry/api/controllers.DeleteEntree (6 handlers)
+[GIN-debug] PUT    /api/menu/tag/:name       --> Hangry/api/controllers.AddNewTag (6 handlers)
+[GIN-debug] DELETE /api/menu/tag/:name       --> Hangry/api/controllers.DeleteTag (6 handlers)
+[GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
+Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
+[GIN-debug] Listening and serving HTTP on :8026
